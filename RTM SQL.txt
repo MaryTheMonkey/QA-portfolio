@@ -1,0 +1,3 @@
+SQL Select for RTM representation:
+
+select (count (distinct RTM.Features_id) / count (Features.id) * 100 ) from RTM Right Join Features On RTM.Features_id=Features.ID

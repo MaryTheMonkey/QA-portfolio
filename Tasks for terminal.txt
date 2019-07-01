@@ -1,0 +1,13 @@
+1. mkdir directory
+2. cd directory
+   touch date_{A..E}
+3. 3.1 date >> date_A
+       date >> date_B
+       date >> date_C
+       date >> date_D
+       date >> date_E
+   3.2 date | tee date_{A..E}
+   3.3 for f in date_*; do date > $f; done
+4. 4.1 grep -c 2019 date_A date_B date_C date_D date_E
+   4.2 grep -c 2019 date_A date_B date_C date_D date_E | wc -l
+5. rm -rf directory
